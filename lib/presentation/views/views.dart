@@ -1,0 +1,1 @@
+export 'home_views/favorites_view.dart';
