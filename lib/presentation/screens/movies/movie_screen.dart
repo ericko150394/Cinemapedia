@@ -175,8 +175,8 @@ class _ActorsByMovie extends ConsumerWidget {
                     actor.character ?? '',
                     maxLines: 2,
                     style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        ),
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
@@ -199,6 +199,12 @@ class _CustomSliverAppBar extends StatelessWidget {
       backgroundColor: Colors.black,
       expandedHeight: size.height * 0.7,
       foregroundColor: Colors.white,
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.favorite_border),
+        )
+      ],
       flexibleSpace: FlexibleSpaceBar(
         titlePadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
         title: Text(
@@ -212,8 +218,10 @@ class _CustomSliverAppBar extends StatelessWidget {
               child: Image.network(
                 movie.posterPath,
                 fit: BoxFit.cover,
-                loadingBuilder: (context, child, loadingProgress) { //Si la imagen aun no ha cargado...
-                  if(loadingProgress != null) return FadeIn(child: const SizedBox());
+                loadingBuilder: (context, child, loadingProgress) {
+                  //Si la imagen aun no ha cargado...
+                  if (loadingProgress != null)
+                    return FadeIn(child: const SizedBox());
                   return child;
                 },
               ),
