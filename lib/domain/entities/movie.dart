@@ -1,4 +1,15 @@
+
+import 'package:isar/isar.dart'; //2) Importamos isar
+
+part 'movie.g.dart'; //'movie' es el nombre del 'archivo'.dart donde se implamenta isar (ES NORMAL SI MARCA ERROR)
+
+//5) Correr el comando 'flutter pub run build_runner build' en consola:
+//Este comando va a verificar los archivos decorados con @collection y generara el archivo
+
+@collection //Implementamos el funcionamiento Isar (BD): 1) Agregamos la anotación collection
 class Movie {
+  Id? isarId; //3) Agradimos el campo id para Isar (puede ser opcional ?)
+
   final bool adult;
   final String backdropPath;
   final List<String> genreIds;
