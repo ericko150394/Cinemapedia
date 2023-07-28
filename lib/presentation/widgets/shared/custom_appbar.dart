@@ -73,7 +73,7 @@ class CustomAppBar extends ConsumerWidget {
                         ), //Enviamos la función solicitada por searchDelegate
                     ).then((movie) {
                       if(movie ==null) return;
-                      context.push('/movie/${movie.id}');
+                      context.push('/home/0/movie/${movie.id}');
                     });
 
                     //NOTA: Don't use 'BuildContext's across async gaps:
